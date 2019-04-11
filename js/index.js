@@ -69,6 +69,14 @@ aLinkText[3].textContent = 'Features';
 aLinkText[4].textContent = 'About';
 aLinkText[5].textContent = 'Content';
 
+// use forEach() to loop through nav links and turn green
+let navLinks = document.querySelectorAll('a');
+navLinks.forEach(thing => {
+  // console.log(thing);
+  // console.log((thing.style.color = 'green'));
+  thing.style.color = 'green';
+});
+
 // add new nav items to the nav
 let navItem0 = document.createElement('a');
 let navItem7 = document.createElement('a');
@@ -76,7 +84,9 @@ let menu = document.getElementsByTagName('nav')[0];
 menu.prepend(navItem0);
 menu.appendChild(navItem7);
 navItem0.innerText = 'Blog';
+navItem0.style.color = 'green';
 navItem7.innerText = 'Resources';
+navItem7.style.color = 'green';
 
 // make the cta image appear
 let ctaImage = document.getElementById('cta-img');
