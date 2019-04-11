@@ -63,12 +63,20 @@ logo.setAttribute('src', siteContent['nav']['img-src']);
 // make the nav items appear
 let aLinkText = document.getElementsByTagName('a');
 aLinkText[0].textContent = 'Services';
-// aLinkText[0].style.color = '#DEC6D9';
 aLinkText[1].textContent = 'Products';
 aLinkText[2].textContent = 'Vision';
 aLinkText[3].textContent = 'Features';
 aLinkText[4].textContent = 'About';
 aLinkText[5].textContent = 'Content';
+
+// add new nav items to the nav
+let navItem0 = document.createElement('a');
+let navItem7 = document.createElement('a');
+let menu = document.getElementsByTagName('nav')[0];
+menu.prepend(navItem0);
+menu.appendChild(navItem7);
+navItem0.innerText = 'Blog';
+navItem7.innerText = 'Resources';
 
 // make the cta image appear
 let ctaImage = document.getElementById('cta-img');
